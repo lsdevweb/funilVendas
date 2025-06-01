@@ -129,5 +129,6 @@ Este projeto implementa um funil de vendas básico para captação de leads inte
 
 Veja abaixo o fluxo completo de interação do funil de vendas:
 
-![Fluxo Completo do Funil]
+![Fluxo Completo do Funil]funilVendas
+/fotos-projeto-fV/
 ---
