@@ -125,5 +125,9 @@ Este projeto implementa um funil de vendas básico para captação de leads inte
 * **Melhoria do Envio de E-mail:** Implementar templates de e-mail mais dinâmicos e personalizar conteúdo.
 * **Segurança:** Adicionar medidas de segurança como proteção contra CSRF (Cross-Site Request Forgery) e SQL Injection (usar prepared statements com PDO ou MySQLi).
 * **Configuração de Ambiente:** Utilizar variáveis de ambiente (`.env` files) para configurações mais complexas e seguras.
+## Demonstração do Fluxo
 
+Veja abaixo o fluxo completo de interação do funil de vendas:
+
+![Fluxo Completo do Funil]
 ---
