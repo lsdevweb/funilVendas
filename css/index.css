@@ -1,0 +1,653 @@
+/* --- Reset e Estilos Gerais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Estilos Comuns de Títulos e Parágrafos --- */
+h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Largura máxima para o conteúdo principal */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Botão Padrão (se for usar em outras partes) --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #3a56d4;
+    transform: translateY(-2px);
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: black;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: orange;
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal;
+}
+
+header h1.header-title {
+    font-size: 1.8em;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 auto;
+    order: 2; /* Em desktop, ficará no meio */
+}
+
+.whatsapp-button {
+    order: 3;
+}
+
+.whatsapp-button button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: green;
+    color: white; /* Alterado para branco para melhor contraste */
+    padding: 10px 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.whatsapp-button button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* --- Seção Hero com Formulário --- */
+.hero {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que as colunas quebrem a linha */
+}
+
+.hero-image {
+    flex: 2;
+    min-width: 280px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.hero-content {
+    flex: 3;
+    min-width: 300px;
+    padding-right: 15px;
+}
+
+.hero-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.benefits-list {
+    margin: 20px 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.benefit-icon {
+    width: 26px;
+    height: 26px;
+    background-color: #ebf4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+    color: #4361ee;
+}
+
+.benefit-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+/* --- Formulário --- */
+.form-container {
+    flex: 2;
+    min-width: 350px; /* Garante tamanho mínimo em desktop */
+    background-color: #f8fafc;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.form-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2d3748;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #4361ee;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+.qualification-options {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    background-color: #eef7ff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #cce0ff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.option-item:hover {
+    background-color: #dbeaff;
+    border-color: #aaccff;
+}
+
+.option-item input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #4361ee;
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+}
+
+.privacy-text {
+    font-size: 12px;
+    color: #718096;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.privacy-text a:hover {
+    text-decoration: underline;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 25px 0 10px; /* Ajuste para diminuir o tamanho geral */
+    box-sizing: border-box;
+    margin-top: auto; /* Empurra o rodapé para o final da página */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Mantido para desktop */
+    gap: 30px; /* Reduzido o gap */
+    max-width: 1000px; /* Diminui a largura máxima do rodapé */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Ajuste para melhor comportamento em telas médias */
+    padding-bottom: 15px; /* Reduzido */
+}
+
+/* Estilo para a coluna de Lucimar Santos */
+.footer-col h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px; /* Reduzido */
+    position: relative;
+    padding-bottom: 8px; /* Reduzido */
+}
+
+.footer-col h4:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #4361ee;
+}
+
+.footer-col p {
+    font-size: 0.9em;
+    color: #cbd5e0;
+}
+
+/* Contato */
+.contact-info {
+    margin-bottom: 12px; /* Reduzido */
+    display: flex;
+    align-items: flex-start;
+    color: #cbd5e0;
+    font-size: 0.9em; /* Levemente menor */
+}
+
+.contact-info a {
+    color: #cbd5e0;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-icon {
+    margin-right: 8px; /* Reduzido */
+    color: orange; /* Mantido laranja como no seu exemplo */
+    flex-shrink: 0;
+    font-size: 1.1em;
+}
+
+/* Links Sociais */
+.social-links {
+    display: flex;
+    gap: 12px; /* Reduzido */
+    margin-top: 20px; /* Reduzido */
+}
+
+.social-link {
+    width: 38px; /* Ajustado */
+    height: 38px; /* Ajustado */
+    background-color: #4a5568;
+    border-radius: 50%; /* Alterado para 50% para um círculo perfeito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #4361ee;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding-top: 20px; /* Reduzido */
+    margin-top: 20px; /* Reduzido */
+    border-top: 1px solid #4a5568;
+    color: #cbd5e0;
+    font-size: 12px; /* Crucial para caber por inteiro */
+    line-height: 1.4;
+}
+
+/* --- Media Queries (Responsividade) --- */
+
+/* Para telas até 992px (tablets e alguns notebooks) */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column; /* Empilha a imagem, conteúdo e formulário */
+        align-items: center; /* Centraliza os itens empilhados */
+    }
+
+    .hero-image, .hero-content, .form-container {
+        flex: none; /* Remove a flexibilidade definida anteriormente */
+        width: 100%; /* Ocupa a largura total do container */
+        max-width: 600px; /* Limita a largura em telas médias */
+        margin: 0 auto; /* Centraliza o bloco */
+    }
+
+    .hero-image {
+        margin-bottom: 30px; /* Ajuste do espaçamento */
+    }
+
+    .hero-content {
+        padding-right: 0; /* Remove padding lateral em mobile */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .hero-title {
+        font-size: 28px; /* Levemente menor */
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+    }
+
+    .benefits-list {
+        display: inline-block; /* Permite centralizar a lista de benefícios */
+        text-align: left; /* Garante que o texto da lista continue alinhado à esquerda dentro do seu container */
+    }
+
+    .form-container {
+        margin-top: 30px; /* Ajuste do espaçamento */
+        padding: 25px; /* Reduz o padding do formulário */
+    }
+
+    /* Rodapé em telas médias */
+    .footer-container {
+        justify-content: center; /* Centraliza as colunas se não couberem lado a lado */
+        text-align: center; /* Centraliza o texto */
+        gap: 20px; /* Reduz o gap entre colunas */
+    }
+
+    .footer-col {
+        min-width: 280px; /* Ajuste para ter um tamanho mínimo decente */
+    }
+
+    .footer-col h4:after {
+        left: 50%; /* Centraliza a linha do título em telas menores */
+        transform: translateX(-50%);
+    }
+
+    .contact-info {
+        justify-content: center; /* Centraliza as informações de contato */
+    }
+
+    .social-links {
+        justify-content: center; /* Centraliza os ícones sociais */
+    }
+}
+
+/* Para telas até 768px (smartphones) */
+@media (max-width: 767px) {
+    header .header-content {
+        flex-direction: column; /* Empilha logo, título e botão */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+        order: 1; /* Mantém a logo no topo */
+    }
+
+    header h1.header-title {
+        font-size: 1.5em; /* Reduz o tamanho do título do cabeçalho */
+        order: 2; /* Mantém o título no meio */
+    }
+
+    .whatsapp-button {
+        order: 3; /* Mantém o botão por último */
+    }
+
+    .hero {
+        padding: 40px 0; /* Reduz o padding da seção hero */
+    }
+
+    .hero-title {
+        font-size: 24px; /* Mais ajuste para telas pequenas */
+        margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .benefit-item {
+        font-size: 0.95em; /* Reduz um pouco o texto dos benefícios */
+        margin-bottom: 8px;
+    }
+
+    .form-title {
+        font-size: 20px; /* Reduz o título do formulário */
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Reduz o espaço entre os campos do formulário */
+    }
+
+    .form-control {
+        padding: 10px 12px; /* Reduz o padding dos campos */
+        font-size: 15px;
+    }
+
+    .option-item {
+        padding: 8px 12px; /* Reduz o padding dos itens de rádio */
+        font-size: 0.9em;
+        flex: 1 1 auto; /* Permite que os itens preencham o espaço disponível */
+    }
+
+    .option-item label {
+        white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    }
+
+    .submit-button {
+        padding: 12px; /* Reduz o padding do botão de submit */
+        font-size: 1em;
+        margin-top: 15px;
+    }
+
+    /* Rodapé em telas pequenas (mantido o que já havíamos ajustado) */
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .footer-col {
+        min-width: unset;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .footer-col h4:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact-info {
+        justify-content: center;
+        font-size: 0.85em;
+    }
+
+    .contact-icon {
+        margin-right: 5px;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .social-link {
+        width: 32px; /* Menor em mobile */
+        height: 32px; /* Menor em mobile */
+    }
+
+    .copyright {
+        padding-top: 15px;
+        margin-top: 15px;
+        font-size: 11px; /* Muito importante para caber */
+    }
+}
+
+/* Para telas MUITO pequenas (ex: iPhones SE antigos) */
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    header h1.header-title {
+        font-size: 1.3em;
+    }
+
+    .whatsapp-button button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .hero-title {
+        font-size: 22px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .benefit-item {
+        font-size: 0.9em;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+    .copyright {
+        font-size: 10px; /* Para garantir que caiba em qualquer tela */
+    }
+}

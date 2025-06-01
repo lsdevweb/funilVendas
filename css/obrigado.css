@@ -1,0 +1,153 @@
+ 
+     /* Importar estilos gerais para o header e footer */
+@import url('index.css'); /* Importa os estilos base do seu index.css */
+
+/* --- Estilos específicos para a página de Obrigado --- */
+
+body {
+    background-color: #f0f0f0; /* Fundo cinza claro que você já usa no body geral */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Empurra o rodapé para o final */
+}
+
+/* Container principal da mensagem de agradecimento */
+.container-obrigado {
+    background-color: white; /* Fundo branco para o container central */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 40px;
+    margin: 50px auto; /* Centraliza o container e adiciona margem vertical */
+    max-width: 700px; /* Largura máxima para o conteúdo */
+    text-align: center; /* Centraliza o texto dentro do container */
+    flex-grow: 1; /* Permite que ele ocupe o espaço disponível e centralize verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.container-obrigado h1 {
+    color: #2d3748;
+    font-size: 2.8em; /* Tamanho do título principal */
+    margin-bottom: 20px;
+}
+
+.container-obrigado .emoji {
+    font-size: 1.2em; /* Tamanho do emoji maior que o texto adjacente */
+    margin-right: 10px;
+}
+
+.container-obrigado p {
+    color: #4a5568;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.container-obrigado hr {
+    border: none;
+    border-top: 1px solid #cbd5e0;
+    width: 60%; /* Linha divisória */
+    margin: 30px auto; /* Espaço ao redor da linha */
+}
+
+.container-obrigado h2 {
+    color: #2d3748;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.quiz-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4361ee; /* Cor de destaque (azul) */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+.quiz-button:hover {
+    background-color: #3a56d4;
+    transform: translateY(-2px);
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #718096;
+    margin-top: 15px;
+}
+
+/* --- Responsividade para a página de Obrigado --- */
+
+@media (max-width: 992px) {
+    .container-obrigado {
+        margin: 30px 15px;
+        padding: 30px;
+    }
+    .container-obrigado h1 {
+        font-size: 2.2em;
+    }
+    .container-obrigado h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .logo, .whatsapp-button {
+        order: unset; /* Reseta a ordem para o fluxo normal em mobile */
+    }
+    header h1.header-title {
+        display: none; /* Oculta o título grande do cabeçalho nesta página se ele estiver lá */
+    }
+
+    .container-obrigado {
+        padding: 25px;
+        margin: 20px 10px;
+    }
+    .container-obrigado h1 {
+        font-size: 1.8em;
+    }
+    .container-obrigado h2 {
+        font-size: 1.5em;
+    }
+    .container-obrigado p {
+        font-size: 1em;
+    }
+    .quiz-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-obrigado {
+        padding: 20px;
+    }
+    .container-obrigado h1 {
+        font-size: 1.5em;
+    }
+    .container-obrigado h2 {
+        font-size: 1.3em;
+    }
+    .container-obrigado p {
+        font-size: 0.9em;
+    }
+    .quiz-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .small-text {
+        font-size: 0.75em;
+    }
+}

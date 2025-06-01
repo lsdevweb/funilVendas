@@ -1,0 +1,146 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Cinza claro de fundo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o quiz fique centralizado na tela */
+}
+
+.quiz-container {
+    background-color: #fff; /* Fundo branco para o container do quiz */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 90%; /* Largura responsiva */
+    max-width: 600px; /* Largura máxima */
+    margin: 20px;
+    overflow: hidden; /* Garante que nada vaze das bordas */
+}
+
+header.text-center {
+    padding: 20px;
+}
+
+h1.text-3xl {
+    font-size: 2.25rem; /* 36px */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p.text-gray-600 {
+    color: #718096;
+}
+
+/* Barra de progresso */
+.progress-bar-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #4CAF50; /* Verde */
+    width: 0%; /* Começa em 0 */
+    transition: width 0.3s ease; /* Animação suave da barra */
+    border-radius: 5px;
+}
+
+/* Conteúdo do Quiz */
+.quiz-content {
+    padding: 20px;
+}
+
+.quiz-step {
+    display: none; /* Esconde todos os passos inicialmente */
+}
+
+.quiz-step.active {
+    display: block; /* Exibe apenas o passo ativo */
+}
+
+/* Cartões de opção */
+.option-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.option-card:hover {
+    border-color: #aaa;
+}
+
+.option-card.selected {
+    border-color: #007bff; /* Azul */
+    background-color: #f0f8ff; /* Azul muito claro */
+}
+
+.option-card .flex-shrink-0 {
+    margin-right: 15px;
+}
+
+.option-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.option-card p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Select */
+select.w-full {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    appearance: none; /* Remove a seta padrão do select */
+    background: url('data:image/svg+xml;utf8,<svg fill="%23333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 1em;
+}
+
+/* Botões */
+.next-btn, .prev-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn {
+    background-color: #007bff; /* Azul */
+}
+
+.next-btn:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+.prev-btn {
+    background-color: #6c757d; /* Cinza */
+}
+
+.prev-btn:hover {
+    background-color: #5a6268; /* Cinza mais escuro */
+}
+
+.flex.justify-between { /* Para os botões "Voltar" e "Próximo" */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
